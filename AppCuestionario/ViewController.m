@@ -49,8 +49,18 @@
 
 - (IBAction)onVerSiguientePreguna:(id)sender {
     _indice++;
-    if(_indice > _preguntas.count){
+    if(_indice >= _preguntas.count){
         _indice = 0;
+    }
+    _lblPregunta.text = [_preguntas  objectAtIndex:_indice];
+    _lblRespuesta.text = @" ??? ";
+}
+
+- (IBAction)onVerAnteriorPregunta:(id)sender {
+    if(_indice == 0 ){
+        _indice = _preguntas.count - 1;
+    }else{
+        _indice--;
     }
     _lblPregunta.text = [_preguntas  objectAtIndex:_indice];
     _lblRespuesta.text = @" ??? ";

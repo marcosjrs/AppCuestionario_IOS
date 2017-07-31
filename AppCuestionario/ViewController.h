@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblRespuesta;
 - (IBAction)onVerRespuesta:(id)sender;
 - (IBAction)onVerSiguientePreguna:(id)sender;
+- (IBAction)onVerAnteriorPregunta:(id)sender;
 
 @end
 
