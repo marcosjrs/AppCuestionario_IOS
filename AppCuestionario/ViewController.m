@@ -24,10 +24,14 @@
                     @"¿Qué es Objective C?" ];
     
     _respuestas = @[ @"El primer semáforo data de 1868",
-                     @"Las monedas de un euro cuestan en torno a 4,5 céntimos. Las de dos euros rondan los 5,2 céntimos. Las más pequeñas, de 1 y 2 céntimos, salen prácticamente por lo mismo que valen, por lo que se ha puesto en duda lo oportuno de seguir fabricándolas.",
+                     @"Las monedas de un euro cuestan en torno a 4,5 céntimos.",
                      @"El Sistema Operativo de iPhone e iPad",
                      @"Model-View-Controller\nModelo-Vista-Controlador",
                      @"Un superconjunto estricto de C" ];
+    
+    _lblPregunta.text = [_preguntas  objectAtIndex:_indice];
+    _lblRespuesta.text = @" ??? ";
+    
     
 }
 
@@ -39,8 +43,16 @@
 
 
 - (IBAction)onVerRespuesta:(id)sender {
+    _lblRespuesta.text = [_respuestas objectAtIndex:_indice];
+    
 }
 
 - (IBAction)onVerSiguientePreguna:(id)sender {
+    _indice++;
+    if(_indice > _preguntas.count){
+        _indice = 0;
+    }
+    _lblPregunta.text = [_preguntas  objectAtIndex:_indice];
+    _lblRespuesta.text = @" ??? ";
 }
 @end
