@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSArray * preguntas;
+@property (strong, nonatomic) NSArray * respuestas;
+@property NSUInteger indice;
+
 
 @end
 
