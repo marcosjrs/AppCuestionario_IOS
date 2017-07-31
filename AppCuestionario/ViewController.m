@@ -38,4 +38,9 @@
 }
 
 
+- (IBAction)onVerRespuesta:(id)sender {
+}
+
+- (IBAction)onVerSiguientePreguna:(id)sender {
+}
 @end

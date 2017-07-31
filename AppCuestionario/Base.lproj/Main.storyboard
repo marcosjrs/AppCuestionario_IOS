@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,78 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP6-16-CWK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="stb-Gd-Sta"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reT-gk-3gc">
+                                <rect key="frame" x="0.0" y="145" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.99548656089999998" green="0.58835399070000005" blue="0.22333305989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GNC-jf-UFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Ver Respuesta">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onVerRespuesta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJO-c3-fZZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hg4-NH-mUV">
+                                <rect key="frame" x="0.0" y="302" width="375" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="T20-46-PXJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-X1-Ien">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.99548656089999998" green="0.58835399070000005" blue="0.22333305989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BU7-na-nsQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Ver Siguiente Pregunta">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onVerSiguientePreguna:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPW-oI-r3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hg4-NH-mUV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0RF-nK-TqI"/>
+                            <constraint firstItem="reT-gk-3gc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0gb-wJ-Tfa"/>
+                            <constraint firstAttribute="trailing" secondItem="4DM-X1-Ien" secondAttribute="trailing" id="1i1-WT-3a4"/>
+                            <constraint firstItem="Hg4-NH-mUV" firstAttribute="top" secondItem="reT-gk-3gc" secondAttribute="bottom" constant="57" id="4WM-Du-xUU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4DM-X1-Ien" secondAttribute="bottom" id="6la-ea-y2V"/>
+                            <constraint firstItem="reT-gk-3gc" firstAttribute="top" secondItem="lP6-16-CWK" secondAttribute="bottom" constant="17" id="8Rk-Rr-VQX"/>
+                            <constraint firstItem="4DM-X1-Ien" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BHb-fu-bp4"/>
+                            <constraint firstItem="lP6-16-CWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="POh-iO-hZk"/>
+                            <constraint firstAttribute="trailing" secondItem="Hg4-NH-mUV" secondAttribute="trailing" id="Zo5-og-BNL"/>
+                            <constraint firstItem="lP6-16-CWK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="doh-lw-TAA"/>
+                            <constraint firstAttribute="trailing" secondItem="reT-gk-3gc" secondAttribute="trailing" id="h46-Sj-wR2"/>
+                            <constraint firstAttribute="trailing" secondItem="lP6-16-CWK" secondAttribute="trailing" id="kEL-hE-UzD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblPregunta" destination="lP6-16-CWK" id="Fen-Ab-aqM"/>
+                        <outlet property="lblRespuesta" destination="Hg4-NH-mUV" id="Kn7-Xt-R5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

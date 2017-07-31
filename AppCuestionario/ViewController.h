@@ -14,6 +14,10 @@
 @property (strong, nonatomic) NSArray * respuestas;
 @property NSUInteger indice;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblPregunta;
+@property (weak, nonatomic) IBOutlet UILabel *lblRespuesta;
+- (IBAction)onVerRespuesta:(id)sender;
+- (IBAction)onVerSiguientePreguna:(id)sender;
 
 @end
 
